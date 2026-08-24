@@ -279,6 +279,11 @@ This provides:
 - Support for multiple model families
 - A modular foundation for future model integration
 
+
+## System Architecture
+
+![Engineering Intelligence Architecture](Screenshots/Image1.png)
+
 ---
 
 ## 9. Engineering Application Interface
@@ -295,6 +300,10 @@ The interface provides access to:
 - Multimodal technical analysis
 
 The application also supports structured response presentation and mathematical notation.
+
+## Application Preview
+
+![Engineering Intelligence Application](Screenshots/Image2.png)
 
 ---
 
