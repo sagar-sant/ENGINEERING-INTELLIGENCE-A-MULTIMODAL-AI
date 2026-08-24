@@ -1,6 +1,6 @@
-# Engineering Intelligence
+# Engineering Intelligence - A Multimodal AI
 
-### A Multimodal AI Framework for Engineering, Technical, Scientific, Mathematical Analysis and Intelligent Assistance
+### A Unified AI Framework for Engineering, Technical, Scientific, Mathematical Analysis and Intelligent Assistance
 
 > A unified AI framework for engineering, technical, scientific, and mathematical analysis and intelligent assistance.
 
