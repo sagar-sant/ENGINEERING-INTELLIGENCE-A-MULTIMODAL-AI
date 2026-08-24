@@ -1,6 +1,6 @@
-# Engineering Intelligence - A Multimodal AI 
+# Engineering Intelligence
 
-### A unified AI Framework for Engineering, Technical, Scientific, Mathematical Analysis and Intelligent Assistance
+### A Multimodal AI Framework for Engineering, Technical, Scientific, Mathematical Analysis and Intelligent Assistance
 
 > A unified AI framework for engineering, technical, scientific, and mathematical analysis and intelligent assistance.
 
@@ -80,8 +80,11 @@ Request Analysis
      +----> Deterministic Calculation
      |
      +----> Multimodal Vision
+```
 
 This design avoids forcing every request through a single language model and provides a foundation for task-specific model selection.
+
+---
 
 ## 3. Document Intelligence and Retrieval-Augmented Generation
 
@@ -89,6 +92,7 @@ Technical documents can be processed and queried through a retrieval-augmented g
 
 The document workflow includes:
 
+```text
 Document
    |
    v
@@ -111,38 +115,58 @@ Relevant Retrieval
    |
    v
 Context-Aware LLM Response
-
+```
 
 This allows responses to be grounded in information retrieved from uploaded technical documents rather than relying exclusively on pretrained language-model knowledge.
 
 The document pipeline is designed for use cases such as:
 
-Engineering manuals
-Technical specifications
-Procedures
-Tables
-Technical reports
-Scientific documents
-Engineering PDFs
-Structured and semi-structured technical content
+- Engineering manuals
+- Technical specifications
+- Procedures
+- Tables
+- Technical reports
+- Scientific documents
+- Engineering PDFs
+- Structured and semi-structured technical content
 
-4. Deterministic Mathematical and Engineering Computation
+---
+
+## 4. Deterministic Mathematical and Engineering Computation
 
 A dedicated computational layer is used for numerical and symbolic problems.
 
 The framework integrates:
 
-Python
-NumPy
-SciPy
-SymPy
+- **Python**
+- **NumPy**
+- **SciPy**
+- **SymPy**
 
-A calculation detector identifies quantitative requests and routes suitable problems to a deterministic computational pathway. This design separates language reasoning from numerical execution and reduces dependence on language-model arithmetic for supported mathematical and engineering calculations.
+A calculation detector identifies quantitative requests and routes suitable problems to a deterministic computational pathway.
 
-5. Calculation Planning
+### Example
+
+```text
+Question:
+What is the cube of 7425?
+
+Deterministic calculation:
+7425^3
+
+Result:
+409,344,890,625
+```
+
+This design separates language reasoning from numerical execution and reduces dependence on language-model arithmetic for supported mathematical and engineering calculations.
+
+---
+
+## 5. Calculation Planning
 
 More complex engineering and mathematical problems can be transformed into structured computational plans before deterministic execution.
 
+```text
 Natural-Language Problem
           |
           v
@@ -159,26 +183,30 @@ Verified Result
           |
           v
 Technical Explanation
+```
 
 The calculation-planning layer provides a structured bridge between natural-language problem descriptions and deterministic computational tools.
 
-6. Multimodal Engineering Analysis
+---
+
+## 6. Multimodal Engineering Analysis
 
 Engineering Intelligence extends beyond text-only interaction through multimodal vision capabilities.
 
 The framework is designed to process technical visual information such as:
 
-Engineering drawings
-Schematics
-Diagrams
-Technical figures
-Component images
-Visual engineering information
+- Engineering drawings
+- Schematics
+- Diagrams
+- Technical figures
+- Component images
+- Visual engineering information
 
 A multimodal request can combine visual information with natural-language instructions so that the system can interpret the image and produce a technical response.
 
-Multimodal Workflow
+### Multimodal Workflow
 
+```text
 Technical Image
       +
 Natural-Language Instruction
@@ -191,21 +219,25 @@ Technical Interpretation
       |
       v
 Structured Response
+```
 
-7. LangChain and LangGraph
+---
 
-The project uses LangChain and LangGraph as complementary components within the AI application architecture.
+## 7. LangChain and LangGraph
 
-LangChain
+The project uses **LangChain** and **LangGraph** as complementary components within the AI application architecture.
+
+### LangChain
 
 LangChain is used as part of the LLM application layer for integrating language-model-driven components and AI application workflows.
 
-LangGraph
+### LangGraph
 
 LangGraph provides the structured orchestration layer, representing processing stages as nodes with conditional routing between them.
 
-Combined Architecture
+### Combined Architecture
 
+```text
 User Input
     |
     v
@@ -227,69 +259,91 @@ LangGraph Routing
                            |
                            v
                       Streamlit UI
+```
 
 The orchestration architecture allows the system to support different execution paths while maintaining a unified application interface.
 
-8. Local-First AI Architecture
+---
+
+## 8. Local-First AI Architecture
 
 A major design characteristic of the framework is the use of locally deployed model inference.
 
-Language and vision models are accessed through Ollama, allowing multiple models to coexist within the development environment.
+Language and vision models are accessed through **Ollama**, allowing multiple models to coexist within the development environment.
 
 This provides:
 
-Local model execution
-Flexible model selection
-Reduced dependence on external inference APIs for core processing
-Support for multiple model families
-A modular foundation for future model integration
-9. Engineering Application Interface
+- Local model execution
+- Flexible model selection
+- Reduced dependence on external inference APIs for core processing
+- Support for multiple model families
+- A modular foundation for future model integration
 
-The complete framework is exposed through an interactive Streamlit application.
+---
+
+## 9. Engineering Application Interface
+
+The complete framework is exposed through an interactive **Streamlit** application.
 
 The interface provides access to:
 
-Engineering documents
-Drawings and schematics
-Mathematics and engineering calculations
-Technical question answering
-Natural-language interaction
-Multimodal technical analysis
+- Engineering documents
+- Drawings and schematics
+- Mathematics and engineering calculations
+- Technical question answering
+- Natural-language interaction
+- Multimodal technical analysis
 
 The application also supports structured response presentation and mathematical notation.
 
-Technology Stack
-Development Environment
-Visual Studio Code
-Python
-AI and NLP
-Large Language Models
-Natural Language Processing
-Ollama
-LangChain
-LangGraph
-Retrieval and Document Intelligence
-Retrieval-Augmented Generation (RAG)
-Embeddings
-Vector retrieval
-Document extraction
-Document chunking
-Document ingestion
-Engineering and Scientific Computation
-NumPy
-SciPy
-SymPy
-Multimodal Processing
-Vision-capable language models
-Technical image interpretation
-Application
-Streamlit
+---
 
+# Technology Stack
 
-Project Architecture
+## Development Environment
+
+- Visual Studio Code
+- Python
+
+## AI and NLP
+
+- Large Language Models
+- Natural Language Processing
+- Ollama
+- LangChain
+- LangGraph
+
+## Retrieval and Document Intelligence
+
+- Retrieval-Augmented Generation (RAG)
+- Embeddings
+- Vector retrieval
+- Document extraction
+- Document chunking
+- Document ingestion
+
+## Engineering and Scientific Computation
+
+- NumPy
+- SciPy
+- SymPy
+
+## Multimodal Processing
+
+- Vision-capable language models
+- Technical image interpretation
+
+## Application
+
+- Streamlit
+
+---
+
+# Project Architecture
 
 The source code is organized as a modular Python application.
 
+```text
 src/
 ├── app/
 │   └── Application and document-service logic
@@ -340,12 +394,15 @@ src/
 │
 └── vectorstore/
     └── Vector storage and retrieval infrastructure
+```
 
+---
 
-End-to-End Workflow
+# End-to-End Workflow
 
 A typical request follows a task-dependent processing workflow:
 
+```text
 User Query / Document / Image
             |
             v
@@ -369,74 +426,121 @@ User Query / Document / Image
                   |
                   v
              Streamlit UI
+```
 
+---
 
-Example Use Cases
+# Example Use Cases
 
-Engineering Question Answering
+## Engineering Question Answering
+
+```text
 What is the relationship between voltage,
 current and resistance?
-Mathematical Computation
+```
+
+## Mathematical Computation
+
+```text
 What is the cube of 7425?
+```
 
 Expected deterministic result:
 
+```text
 409,344,890,625
-Technical Document Question Answering
+```
+
+## Technical Document Question Answering
+
+```text
 Upload a technical PDF and ask:
 
 "What is the operating temperature specified
 for the component?"
-Engineering Visual Analysis
+```
+
+## Engineering Visual Analysis
+
+```text
 Upload a schematic and ask:
 
 "Explain the components and trace the
 conventional current path."
-Scientific Reasoning
+```
+
+## Scientific Reasoning
+
+```text
 Explain the relationship between pressure,
 volume and temperature for an ideal gas.
+```
 
-Functional Evaluation
+---
+
+# Functional Evaluation
 
 The framework has been functionally tested across its major processing capabilities.
 
-| Capability               | Evaluation                         | Result        |
-| ------------------------ | ---------------------------------- | ------------- |
-| Conversational AI        | General conversational queries     | Successful    |
-| Technical QA             | Engineering and scientific queries | Successful    |
-| Mathematical computation | (7425^3)                           | Exact result  |
-| Calculation routing      | Quantitative query detection       | Correct route |
-| Calculation planning     | Structured computational problem   | Successful    |
-| Document intelligence    | Document-service integration       | Successful    |
-| Model routing            | Multiple query categories          | Successful    |
-| LangGraph orchestration  | Workflow execution                 | Successful    |
-| Multimodal processing    | Technical visual inputs            | Successful    |
-| Streamlit interface      | End-to-end application testing     | Successful    |
+| Capability | Evaluation | Result |
+|---|---|---|
+| Conversational AI | General conversational queries | Successful |
+| Technical QA | Engineering and scientific queries | Successful |
+| Mathematical computation | 7425^3 | Exact result |
+| Calculation routing | Quantitative query detection | Correct route |
+| Calculation planning | Structured computational problem | Successful |
+| Document intelligence | Document-service integration | Successful |
+| Model routing | Multiple query categories | Successful |
+| LangGraph orchestration | Workflow execution | Successful |
+| Multimodal processing | Technical visual inputs | Successful |
+| Streamlit interface | End-to-end application testing | Successful |
 
+The evaluation focuses primarily on **functional integration, routing behavior, deterministic computation, and end-to-end application execution**.
 
-The evaluation focuses primarily on functional integration, routing behavior, deterministic computation, and end-to-end application execution.
+---
 
-Design Philosophy
+# Design Philosophy
 
 The central design principle of Engineering Intelligence is:
 
-Use language models for language and reasoning, and use specialized tools for operations that benefit from deterministic computation, retrieval, or multimodal processing.
+> **Use language models for language and reasoning, and use specialized tools for operations that benefit from deterministic computation, retrieval, or multimodal processing.**
 
 The resulting architecture combines complementary capabilities rather than treating a single language model as a universal solution.
 
-Project Status
+---
 
-Status: Functional prototype / research project
+# Project Status
+
+**Status: Functional prototype / research project**
 
 The core framework has been implemented and functionally tested across conversational, computational, document-based, retrieval, multimodal, orchestration, and application workflows.
 
+---
 
-Author
+# Future Work
 
-Sagar Sant
+Potential future extensions include:
 
-BSc. (Hons.) Data Science & Artificial Intelligence
+- Larger engineering-domain knowledge bases
+- Expanded technical document support
+- Additional engineering calculation modules
+- MATLAB and engineering simulation integration
+- Specialized coding and code-generation models
+- Improved multimodal reasoning for complex schematics
+- More advanced agentic workflows
+- Persistent conversational memory
+- Quantitative benchmarking
+- Controlled latency and resource evaluation
+- Hardware-accelerated inference
+- Production-scale deployment and monitoring
+
+---
+
+# Author
+
+**Sagar Sant**
+
+BSc. (Hons.) Data Science & Artificial Intelligence  
 Indian Institute of Technology Guwahati
 
-
-
+---
