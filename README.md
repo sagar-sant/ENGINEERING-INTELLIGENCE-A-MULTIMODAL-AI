@@ -1,83 +1,82 @@
-# Engineering Intelligence: A Multimodal AI Framework
+# Engineering Intelligence - A Multimodal AI 
+
+### A unified AI Framework for Engineering, Technical, Scientific, Mathematical Analysis and Intelligent Assistance
 
 > A unified AI framework for engineering, technical, scientific, and mathematical analysis and intelligent assistance.
+
+---
 
 ## Overview
 
 **Engineering Intelligence** is a modular, multimodal artificial intelligence framework designed to provide a unified environment for engineering, technical, scientific, and mathematical problem solving.
 
-The system combines **natural language processing, locally deployed large language models, intelligent model routing, retrieval-augmented generation (RAG), document intelligence, deterministic numerical and symbolic computation, multimodal vision, and LangGraph-based workflow orchestration** within a single interactive application.
+The framework combines **natural language processing, locally deployed large language models, intelligent model routing, retrieval-augmented generation (RAG), document intelligence, deterministic numerical and symbolic computation, multimodal vision, LangChain-based AI application components, and LangGraph-based workflow orchestration** within a single interactive application.
 
-Rather than relying on a single language model for every task, the framework analyzes the nature of a request and routes it to an appropriate model, retrieval pipeline, computational engine, or multimodal processing capability.
+Rather than relying on a single language model for every task, the system analyzes the nature of a request and routes it to an appropriate language model, retrieval pipeline, deterministic computational tool, or multimodal processing capability.
 
-This architecture enables the same application to handle:
+The framework is designed to support:
 
-- Engineering and scientific questions
-- Mathematical and symbolic calculations
+- Engineering and scientific question answering
+- Mathematical and symbolic computation
 - Technical document analysis
-- Retrieval-based question answering
+- Retrieval-augmented question answering
 - Engineering drawings and schematics
 - Technical images and figures
-- General technical conversations
-- Context-aware document-based reasoning
+- Natural-language technical conversations
+- Context-aware document reasoning
+- Multimodal technical analysis
 
 ---
 
-## Key Features
+# Key Features
 
-### 1. Natural Language Processing and LLMs
+## 1. Natural Language Processing and Large Language Models
 
-The framework provides a natural-language interaction layer powered by multiple locally deployed large language models.
+Natural language processing forms the primary interaction layer of Engineering Intelligence.
 
-Capabilities include:
+The framework supports multiple locally deployed large language models and provides capabilities including:
 
 - Conversational question answering
 - Technical and scientific reasoning
 - Natural-language query understanding
-- Task classification
-- Model selection based on request type
+- Request classification
+- Task-dependent model selection
 - Structured technical response generation
 
-Models are served locally through **Ollama**, providing a flexible local-first inference architecture.
+Local model inference is provided through **Ollama**, enabling the framework to work with multiple locally available model families.
+
+Examples of model families used during development and testing include:
+
+- Gemma
+- Qwen
+- DeepSeek
+- Llama
+- Mistral
+- Phi
+- Vision-capable Qwen models
+
+The application is designed to remain model-agnostic at the routing layer, allowing different models to be selected according to task requirements.
 
 ---
 
-### 2. Intelligent Model Routing
+## 2. Intelligent Model Routing
 
-Different technical problems require different reasoning capabilities.
+Engineering problems have different reasoning and computational requirements.
 
-The framework therefore includes an intelligent routing layer that can distinguish between requests such as:
-
-- General conversation
-- Technical question answering
-- Advanced reasoning
-- Mathematical computation
-- Document-based retrieval
-- Multimodal visual analysis
-
-The routing architecture reduces dependence on a single model and allows different models and tools to be used according to the requirements of the task.
-
----
-
-### 3. Document Intelligence and RAG
-
-Technical documents can be processed and queried using a retrieval-augmented generation pipeline.
-
-The document workflow includes:
+The framework therefore includes an intelligent model-routing layer that analyzes the characteristics of a request and determines the most appropriate processing path.
 
 ```text
-Document
-   ↓
-Ingestion
-   ↓
-Text Extraction
-   ↓
-Chunking
-   ↓
-Embedding Generation
-   ↓
-Vector Storage
-   ↓
-Relevant Retrieval
-   ↓
-Context-Aware LLM Response
+User Request
+     |
+     v
+Request Analysis
+     |
+     +----> Conversation / Technical QA
+     |
+     +----> Advanced Reasoning
+     |
+     +----> Document Retrieval / RAG
+     |
+     +----> Deterministic Calculation
+     |
+     +----> Multimodal Vision
