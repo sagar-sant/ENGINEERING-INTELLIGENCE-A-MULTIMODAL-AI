@@ -83,7 +83,7 @@ Request Analysis
 
 This design avoids forcing every request through a single language model and provides a foundation for task-specific model selection.
 
-3. Document Intelligence and Retrieval-Augmented Generation
+## 3. Document Intelligence and Retrieval-Augmented Generation
 
 Technical documents can be processed and queried through a retrieval-augmented generation pipeline.
 
